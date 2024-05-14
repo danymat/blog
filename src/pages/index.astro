@@ -1,7 +1,6 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
@@ -13,25 +12,22 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
     <body class="flex flex-col w-full h-dvh text-text bg-base">
         <Header title={SITE_TITLE} />
         <div
-            class="p-5 flex justify-between sm:items-start items-center flex-col sm:flex-row overflow-hidden"
+            class="p-5 flex justify-between sm:items-start items-center flex-col sm:flex-row overflow-hidden h-full"
         >
-            <div class="flex flex-col pt-10 place-items-center h-full">
+            <div class="flex flex-col pt-10 h-full">
                 <img
                     src="logo.png"
                     class="md:w-64 w-32 m-5 rounded-full shadow-iris bg-rose p-0.5 group-hover:opacity-25 ease-in duration-300"
                 />
-                <ul class="flex flex-row space-x-2 justify-center transition">
-                    <li>Couocu</li>
-                    <li>Couocu</li>
-                    <li>Couocu</li>
+                <ul class="flex flex-col space-y-2 pl-5 list-inside">
+                    <li>Linkedin Icon</li>
+                    <li>X icon</li>
+                    <li>Github Icon</li>
                 </ul>
             </div>
             <div
                 class="sm:w-4/6 h-full overflow-y-scroll ease-in duration-300 hover:bg-surface rounded overflow-x-visible py-2 px-10 mr-5"
             >
-                <div class="text-center text-lg font-bold pb-20">
-                    Hello, World !
-                </div>
                 <ul class="list-disc list-inside">
                     <li>faire whoami (Home)</li>
                     <li>choose cool font</li>
@@ -59,75 +55,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
                     Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo
                     officia dolor Lorem duis laboris cupidatat officia voluptate.
                     Culpa proident adipisicing id nulla nisi laboris ex in Lorem
-                    sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non
-                    excepteur duis sunt velit enim. Voluptate laboris sint cupidatat
-                    ullamco enim labore culpa sint ad nisi Lorem pariatur mollit
-                    ex esse exercitation amet. Nisi anim cupidatat excepteur officia.
-                    Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate
-                    voluptate dolor minim nulla est proident. Nostrud officia pariatur
-                    ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
-                    commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
-                    Culpa proident adipisicing id nulla nisi laboris ex in Lorem
-                    sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non
-                    excepteur duis sunt velit enim. Voluptate laboris sint cupidatat
-                    ullamco enim labore culpa sint ad nisi Lorem pariatur mollit
-                    ex esse exercitation amet. Nisi anim cupidatat excepteur officia.
-                    Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate
-                    voluptate dolor minim nulla est proident. Nostrud officia pariatur
-                    ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
-                    commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
-                    Culpa proident adipisicing id nulla nisi laboris ex in Lorem
-                    sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non
-                    excepteur duis sunt velit enim. Voluptate laboris sint cupidatat
-                    ullamco enim labore culpa sint ad nisi Lorem pariatur mollit
-                    ex esse exercitation amet. Nisi anim cupidatat excepteur officia.
-                    Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate
-                    voluptate dolor minim nulla est proident. Nostrud officia pariatur
-                    ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
-                    commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
-                    Culpa proident adipisicing id nulla nisi laboris ex in Lorem
-                    sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non
-                    excepteur duis sunt velit enim. Voluptate laboris sint cupidatat
-                    ullamco enim labore culpa sint ad nisi Lorem pariatur mollit
-                    ex esse exercitation amet. Nisi anim cupidatat excepteur officia.
-                    ex esse exercitation amet. Nisi anim cupidatat excepteur officia.
-                    Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate
-                    voluptate dolor minim nulla est proident. Nostrud officia pariatur
-                    ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
-                    commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
-                    Culpa proident adipisicing id nulla nisi laboris ex in Lorem
-                    sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non
-                    excepteur duis sunt velit enim. Voluptate laboris sint cupidatat
-                    ullamco enim labore culpa sint ad nisi Lorem pariatur mollit
-                    ex esse exercitation amet. Nisi anim cupidatat excepteur officia.
-                    Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate
-                    voluptate dolor minim nulla est proident. Nostrud officia pariatur
-                    ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
-                    commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
-                    Culpa proident adipisicing id nulla nisi laboris ex in Lorem
-                    sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non
-                    sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non
-                    Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate
-                    voluptate dolor minim nulla est proident. Nostrud officia pariatur
-                    ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
-                    commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
-                    Culpa proident adipisicing id nulla nisi laboris ex in Lorem
-                    sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non
-                    excepteur duis sunt velit enim. Voluptate laboris sint cupidatat
-                    ullamco enim labore culpa sint ad nisi Lorem pariatur mollit
-                    ex esse exercitation amet. Nisi anim cupidatat excepteur officia.
-                    Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate
-                    voluptate dolor minim nulla est proident. Nostrud officia pariatur
-                    ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
-                    commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
-                    Culpa proident adipisicing id nulla nisi laboris ex in Lorem
-                    sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non
-                    sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non
-                    sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non
-                    excepteur duis sunt velit enim. Voluptate laboris sint cupidatat
-                    ullamco End excepteur duis sunt velit enim. Voluptate laboris
-                    sint cupidatat ullamco End excepteur duis sunt velit enim. Voluptate
-                    laboris sint cupidatat ullamco End
                 </div>
             </div>
         </div>
