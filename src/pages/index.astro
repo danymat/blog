@@ -2,6 +2,8 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Terminal from "../components/Terminal.astro";
+import Socials from "../components/Socials.astro";
 ---
 
 <!doctype html>
@@ -17,46 +19,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
             <div class="flex flex-col pt-10 h-full">
                 <img
                     src="logo.png"
-                    class="md:w-64 w-32 m-5 rounded-full shadow-iris bg-rose p-0.5 group-hover:opacity-25 ease-in duration-300"
+                    class="md:w-64 w-32 m-5 rounded-full shadow-iris bg-rose p-0.5"
                 />
-                <ul class="flex flex-col space-y-2 pl-5 list-inside">
-                    <li>Linkedin Icon</li>
-                    <li>X icon</li>
-                    <li>Github Icon</li>
-                </ul>
-            </div>
-            <div
-                class="sm:w-4/6 h-full overflow-y-scroll ease-in duration-300 hover:bg-surface rounded overflow-x-visible py-2 px-10 mr-5"
-            >
-                <ul class="list-disc list-inside">
-                    <li>faire whoami (Home)</li>
-                    <li>choose cool font</li>
-                    <li>faire Posts (blog)</li>
-                    <li>faire portfolio (blog)</li>
-                    <li>CV</li>
-                </ul>
-                <br />
-                <div>
-                    _Bonjour_ ! I'm Danymat, a pentester blablabla (see readme)
-                </div>
-                <div class="text-pretty text-justify">
-                    Contact me at
-                    <div>Put Icons: Mastodon, Linkedin, Hackthebox</div>
-                    Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
-                    Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
-                    Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
-                    Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
-                    Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
-                    Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
-                    enim labore culpa sint ad nisi Lorem pariatur mollit ex esse
-                    exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit
-                    nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate
-                    dolor minim nulla est proident. Nostrud officia pariatur ut officia.
-                    Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo
-                    officia dolor Lorem duis laboris cupidatat officia voluptate.
-                    Culpa proident adipisicing id nulla nisi laboris ex in Lorem
+                <div
+                    class="flex justify-center list-inside text-xl text-rose pt-2"
+                >
+                <Socials />
                 </div>
             </div>
+            <Terminal />
         </div>
     </body>
 </html>

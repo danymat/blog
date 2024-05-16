@@ -1,0 +1,19 @@
+---
+import SocialsIcon from "../components/SocialsIcon.astro";
+---
+
+<div
+    class="flex flex-row space-x-3 border-overlay border rounded-md p-1 relative group"
+>
+    <div
+        class="text-muted absolute -top-3 px-2 bg-base left-2 text-sm group-hover:opacity-0 transition duration-300 ease-out group-hover:translate-x-2 after:translate-x-0"
+    >
+        Socials
+    </div>
+    <SocialsIcon
+        href="https://linkedin.com/in/danielmathiot"
+        icon="mdi:linkedin"
+    />
+    <SocialsIcon href="https://x.com/therealdanymat" icon="mdi:twitter" />
+    <SocialsIcon href="https://github.com/danymat" icon="mdi:github-face" />
+</div>

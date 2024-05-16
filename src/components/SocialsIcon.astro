@@ -1,0 +1,10 @@
+---
+const { href, icon } = Astro.props;
+import { Icon } from "astro-icon/components";
+---
+
+<a
+    class="transition hover:text-iris duration-500 rounded-full hover:bg-overlay p-2"
+    href={href}
+    target="_blank"><Icon name={icon} /></a
+>
