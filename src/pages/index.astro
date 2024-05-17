@@ -1,8 +1,5 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import Main from "../components/Main.astro";
+import MainPage from "../layouts/MainPage.astro";
 
 import { getCollection } from "astro:content";
 const posts = (await getCollection("blog")).sort(
@@ -10,48 +7,23 @@ const posts = (await getCollection("blog")).sort(
 );
 ---
 
-<!doctype html>
-<html lang="en" class="">
-    <head>
-        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    </head>
-    <body class="space-y-2 flex flex-col w-full h-dvh text-text bg-base">
-        <Header title={SITE_TITLE} />
-        <Main>
-            <div class="flex flex-col">
-                <div class="flex flex-row"></div>
-                <div class="pt-3">
-                    <div>
-                        My Name if ingo Montoya, you killed my father, prepare
-                        to die. This is a small hello
-                    </div>
-                    <br />
-                    <div class="text-subtle">Recent Posts</div>
-                    <br />
-
-                    <section>
-                        <ul>
-                            {
-                                posts.map((post) => (
-                                    <li>
-                                        <a href={`/blog/${post.slug}/`}>
-                                            {post.data.title}
-                                        </a>
-                                    </li>
-                                ))
-                            }
-                        </ul>
-                    </section>
-                    <ul class="list-disc list-inside">
-                        TODO:
-                        <li>Finish design</li>
-                        <li>choose cool font: terminal + other (Geist)</li>
-                        <li>Do Posts</li>
-                        <li>Do Portfolio</li>
-                        <li>CV.pdf ?</li>
-                    </ul>
-                </div>
+<MainPage title="Welcome !">
+    <div class="flex flex-col">
+        <div class="flex flex-row"></div>
+        <div class="pt-3">
+            <div>
+                My Name if ingo Montoya, you killed my father, prepare to die.
+                This is a small hello
             </div>
-        </Main>
-    </body>
-</html>
+            <br />
+            <ul class="list-disc list-inside">
+                TODO:
+                <li>Finish design</li>
+                <li>choose cool font: terminal + other (Geist)</li>
+                <li>Do Posts</li>
+                <li>Do Portfolio</li>
+                <li>CV.pdf ?</li>
+            </ul>
+        </div>
+    </div>
+</MainPage>

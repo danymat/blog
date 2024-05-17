@@ -1,9 +1,5 @@
 ---
-import BaseHead from "../../components/BaseHead.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
-import Main from "../../components/Main.astro"
+import MainPage from "../../layouts/MainPage.astro";
 
 import { getCollection } from "astro:content";
 const posts = (await getCollection("blog")).sort(
@@ -11,28 +7,23 @@ const posts = (await getCollection("blog")).sort(
 );
 ---
 
-<!doctype html>
-<html lang="en">
-    <head>
-        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    </head>
-    <body class="space-y-2 flex flex-col w-full h-dvh text-text bg-base">
-        <Header />
-        <Main />
-        <!-- <main> -->
-        <!--     <section> -->
-        <!--         <ul> -->
-        <!--             { -->
-        <!--                 posts.map((post) => ( -->
-        <!--                     <li> -->
-        <!--                         <a href={`/blog/${post.slug}/`}> -->
-        <!--                             {post.data.title} -->
-        <!--                         </a> -->
-        <!--                     </li> -->
-        <!--                 )) -->
-        <!--             } -->
-        <!--         </ul> -->
-        <!--     </section> -->
-        <!-- </main> -->
-    </body>
-</html>
+<MainPage title="Blog Posts">
+    <div class="flex flex-col">
+        <div class="flex flex-row"></div>
+        <div class="pt-3">
+            <section>
+                <ul>
+                    {
+                        posts.map((post) => (
+                            <li>
+                                <a href={`/blog/${post.slug}/`}>
+                                    {post.data.title}
+                                </a>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </section>
+        </div>
+    </div>
+</MainPage>
