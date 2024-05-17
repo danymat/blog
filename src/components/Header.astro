@@ -3,10 +3,25 @@ import { SITE_TITLE } from "../consts";
 ---
 
 <header
-    class="flex flex-row items-center place-content-between space-x-3 mx-3 my-2 p-2 rounded-xl bg-surface"
+    class="flex flex-row items-center place-content-between space-x-3 mx-3 my-2 px-2 py-3 rounded bg-surface border border-overlay"
 >
     <a
-        class="text-4xl border-gray-900 py-1 ml-16 font-bold text-transparent bg-clip-text bg-gradient-to-r from-gold to-love"
+        class="text-3xl border-gray-900 ml-16 font-bold text-transparent bg-clip-text bg-gradient-to-r from-gold to-love"
         href="/">{SITE_TITLE}</a
     >
+    <nav class="text-lg pr-3 space-x-2">
+        <a
+            href="/blog"
+            class="transition hover:text-iris duration-300 rounded hover:bg-overlay px-2 py-1"
+        >
+            Posts</a
+        >
+        <a
+            href="/about"
+            class="transition hover:text-iris duration-300 rounded hover:bg-overlay px-2 py-1"
+        >
+            About</a
+        >
+        <!-- <a class="hover:line-through">Portfolio</a> -->
+    </nav>
 </header>
