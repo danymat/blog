@@ -7,7 +7,7 @@ const posts = (await getCollection("blog")).sort(
 );
 ---
 
-<MainPage title="Blog Posts">
+<MainPage title="Posts">
     <div class="flex flex-col">
         <div class="flex flex-row"></div>
         <div class="pt-3">
@@ -15,9 +15,10 @@ const posts = (await getCollection("blog")).sort(
                 <ul>
                     {
                         posts.map((post) => (
-                            <li>
+                            <li class="list-inside list-disc">
                                 <a href={`/blog/${post.slug}/`}>
-                                    {post.data.title}
+                                    {post.data.pubDate.toLocaleDateString("fr")}
+                                    : {post.data.title}
                                 </a>
                             </li>
                         ))

@@ -7,6 +7,13 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://danymat.dev',
-  integrations: [mdx(), sitemap(), tailwind(), icon()]
+    site: 'https://danymat.dev',
+    integrations: [
+        mdx(), 
+        sitemap(), 
+        tailwind({
+            applyBaseStyles : false,
+        }),
+        icon()
+    ]
 });

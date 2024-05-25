@@ -5,6 +5,7 @@ import Socials from "../components/Socials.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { Image } from "astro:assets";
 import logo from "../../public/logo.png";
+import "../base.css";
 
 const { title } = Astro.props;
 ---
@@ -14,7 +15,9 @@ const { title } = Astro.props;
     <head>
         <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     </head>
-    <body class="space-y-2 flex flex-col w-full h-dvh text-text bg-base">
+    <body
+        class="space-y-2 flex flex-col w-full h-dvh text-text bg-base select-none"
+    >
         <Header />
 
         <div
@@ -23,7 +26,7 @@ const { title } = Astro.props;
             <div class="flex flex-col pt-10 h-full">
                 <Image
                     src={logo}
-                    class="md:w-64 w-32 m-5 rounded-full shadow-iris bg-rose p-0.5"
+                    class="md:w-56 w-32 m-5 rounded-full shadow-iris bg-rose p-0.5"
                     alt="Danymat Profile"
                 />
                 <div
@@ -33,17 +36,21 @@ const { title } = Astro.props;
                 </div>
             </div>
             <div
-                class="sm:w-4/6 ease-in duration-300 rounded flex flex-col h-full mr-4 shadow-overlay border border-overlay relative"
+                class="sm:w-3/4 ease-in duration-300 rounded flex flex-col h-full mr-4 shadow-overlay border border-overlay relative"
             >
                 <div
-                    class="text-muted absolute -top-3 px-2 bg-base left-2 text-sm"
+                    class="text-muted absolute -top-3 px-2 bg-base left-2 text-sm rounded-full select-text"
                 >
                     {title}
                 </div>
                 <div
-                    class="text-pretty px-6 pt-10 text-md text-justify flex flex-col space-y-2"
+                    class="pt-3 text-md text-justify flex flex-col space-y-2 overflow-hidden"
                 >
-                    <slot />
+                    <div
+                        class="pt-2 overflow-y-scroll text-pretty break-words text-justify antialiased font-normal oldstyle-nums space-y-4 select-text px-6"
+                    >
+                        <slot />
+                    </div>
                 </div>
             </div>
         </div>
